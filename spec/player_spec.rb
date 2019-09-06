@@ -4,7 +4,7 @@ describe Player do
   let(:name) { double :name }
   subject(:player) { described_class.new(name)}
 
-  let(:karlo) { Player.new('karlo') }
+  let(:game) { Game.new }
   let(:mike) { Player.new('mike') }
 
   describe '#name' do
@@ -19,16 +19,9 @@ describe Player do
     end
   end 
 
-  describe '#attack' do
-    it 'attacks the player' do
-      expect(karlo).to receive(:reduce_hp)
-      mike.inflict_damage(karlo)
-    end
-  end
-
   describe '#reduce_hp' do
     it 'receives damage' do
-      expect { karlo.inflict_damage(mike) }.to change { mike.hp }.by(-10)
+      expect { game.inflict_damage(mike) }.to change { mike.hp }.by(-10)
     end
-  end 
+  end
 end

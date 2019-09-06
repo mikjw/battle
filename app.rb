@@ -24,7 +24,8 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    $player1.inflict_damage($player2)
+    $game = Game.new 
+    $game.inflict_damage($player2)
     @player1 = $player1.name
     @player2 = $player2.name
     @hp1 =  $player1.hp
