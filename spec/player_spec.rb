@@ -20,7 +20,7 @@ describe Player do
 
   describe '#reduce_hp' do
     it 'receives damage' do
-      expect { game.inflict_damage(subject) }.to change { subject.hp }.by(-10)
+      expect { game.inflict_damage }.to change { player_2.hp }.by(-10)
     end
   end
 end
