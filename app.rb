@@ -16,6 +16,7 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+
     @player1 = $player1.name
     @player2 = $player2.name
     @hp1 =  $player1.hp
@@ -24,14 +25,14 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    $game = Game.new 
-    $game.inflict_damage($player2)
+    $player2.reduce_hp
     @player1 = $player1.name
     @player2 = $player2.name
     @hp1 =  $player1.hp
     @hp2 = $player2.hp
     erb(:attack)
   end
+
 
   run! if app_file == $0
 end
