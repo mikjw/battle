@@ -10,5 +10,4 @@ class Player
   def reduce_hp
     @hp -= 10
   end
-
 end

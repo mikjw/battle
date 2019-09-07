@@ -11,5 +11,4 @@ feature "attack -" do
     click_button('attack')
     expect(page).to have_content('Mike - hit points: 90')
   end
-
 end

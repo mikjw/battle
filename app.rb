@@ -3,7 +3,6 @@ require './lib/player'
 require './lib/game'
 
 class Battle < Sinatra::Base
-
   enable :sessions
 
   get '/' do

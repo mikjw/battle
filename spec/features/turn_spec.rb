@@ -10,4 +10,4 @@ feature 'switching turn -' do
     click_button('attack')
     expect(page).to have_content('Current turn: Mike')
   end 
-end 
+end
