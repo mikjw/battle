@@ -2,9 +2,14 @@
   Player: <%= @game.p1.name %> - hit points:  <%= @game.p1.hp %>  Player: <%= @game.p2.name  %> - hit points: <%= @game.p2.hp %> 
 </h1>
 
+<h3>
+  Current turn: <%= @game.players[@game.current_turn].name %>
+</h3>
+
 <form action='/attack' method='get'>
   <input type='submit' name='attack' value='Attack'>
 </form>
 
-  <%= @game.p1.name %> attacked <%= @game.p2.name %>.
-</h1> 
+<h3>
+  <%= @game.players[@game.current_turn-1].name %> attacked <%= @game.players[@game.current_turn].name %>.
+</h3> 

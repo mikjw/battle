@@ -1,4 +1,4 @@
-feature "attack" do
+feature "attack -" do
 
   scenario "player 1 attacks player 2" do
     sign_in_and_play
@@ -11,4 +11,5 @@ feature "attack" do
     click_button('attack')
     expect(page).to have_content('Mike - hit points: 90')
   end
+
 end

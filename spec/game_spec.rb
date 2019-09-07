@@ -22,4 +22,11 @@ describe Game do
       game.inflict_damage
     end
   end
+
+  describe '#current turn' do
+    it 'switches turns after each attack' do
+      game.switch_turn
+      expect(game.current_turn).to eq(1)
+    end 
+  end  
 end
